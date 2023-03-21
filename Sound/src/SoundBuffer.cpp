@@ -54,7 +54,7 @@ free(membuf);
 sf_close(soundEffect);
    // check for AL errors
 while (err = alGetError()){
-DisplayALError("AL Error in " __FUNCTION__ ": ", err);
+//  DisplayALError("AL Error in " __FUNCTION__ ": ", err);  // throws error __FUNCTION__ non-existant
 alDeleteBuffers(1, &m_ID);
 }
 std::cout << "Loaded audio file :'" << audioFilename << "' with ID (" << m_ID << ')' << std::endl;
