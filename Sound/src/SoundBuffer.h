@@ -5,10 +5,10 @@
 
 #include <AL/al.h>
 #include <AL/alc.h>
+#include <AL/alext.h>
 
 #include "../libsndfile/include/sndfile.h"
 #include <inttypes.h>
-#include "/usr/include/AL/alext.h"
 
 void DisplayALError(const char* msg,ALenum error);
 void DisplayALCError(const char* msg,ALCenum error);
