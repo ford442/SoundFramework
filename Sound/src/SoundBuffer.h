@@ -10,18 +10,15 @@
 #include <inttypes.h>
 #include <AL/alext.h>
 
-void DisplayALError(const char* msg, ALenum error);
-void DisplayALCError(const char* msg, ALCenum error);
+void DisplayALError(const char* msg,ALenum error);
+void DisplayALCError(const char* msg,ALCenum error);
 
-class SoundBuffer
-{
+class SoundBuffer{
 public:
-	SoundBuffer(const char* audioFilename);
-	~SoundBuffer();
-
-	ALuint GetID();
+SoundBuffer(const char* audioFilename);
+~SoundBuffer();
+ALuint GetID();
 
 private:
-	ALuint m_ID = 0;
-
+ALuint m_ID = 0;
 };
