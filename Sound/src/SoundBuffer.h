@@ -4,7 +4,7 @@
 #include <iostream>
 #include <AL/al.h>
 #include <AL/alc.h>
-#include <sndfile.hh>
+#include "/content/RAMDRIVE2/SoundFramework/Sound/libsndfile/include/sndfile.hh"
 #include <inttypes.h>
 #include <AL/alext.h>
 
