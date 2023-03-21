@@ -4,7 +4,7 @@
 #include <iostream>
 #include <AL/al.h>
 #include <AL/alc.h>
-#include <sndfile.h>
+#include <sndfile.hh>
 #include <inttypes.h>
 #include <AL/alext.h>
 
