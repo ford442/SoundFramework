@@ -6,7 +6,7 @@
 #include <AL/al.h>
 #include <AL/alc.h>
 
-#include "/libsndfile/include/sndfile.h"
+#include "./libsndfile/include/sndfile.h"
 #include <inttypes.h>
 #include <AL/alext.h>
 
