@@ -4,14 +4,14 @@ SoundDevice::SoundDevice()
 {
    // open default device
    m_Device = alcOpenDevice(nullptr);
-   if (!m_Device) // verify success
+ //  if (!m_Device) // verify success
 
    // create new context
    m_Context = alcCreateContext(m_Device, nullptr);
-   if (!m_Context)   // verify success
+ //  if (!m_Context)   // verify success
 
    // make context current
-  if (!alcMakeContextCurrent(m_Context))   const ALCchar* name = nullptr;
+  alcMakeContextCurrent(m_Context);   const ALCchar* name = nullptr;
 /* 
    if (alcIsExtensionPresent(m_Device, "ALC_ENUMERATE_ALL_EXT"))
       name = alcGetString(m_Device, ALC_ALL_DEVICES_SPECIFIER);
