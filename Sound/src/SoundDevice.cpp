@@ -35,5 +35,5 @@ SoundDevice::~SoundDevice()
    DisplayALCError("Error Destroying Context", alcGetError(m_Device));
 
    // close active device
-   if (!alcCloseDevice(m_Device))
+   alcCloseDevice(m_Device);
 }
