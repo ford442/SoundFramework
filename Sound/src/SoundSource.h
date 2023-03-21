@@ -5,24 +5,22 @@
 
 #include "SoundBuffer.h"
 
-class SoundSource
-{
-public:
-	SoundSource();
-	~SoundSource();
+class SoundSource{
 
-	void Play(SoundBuffer* buffer = nullptr);
-	void Pause();
+public:
+SoundSource();
+~SoundSource();
+void Play(SoundBuffer* buffer = nullptr);
+void Pause();
 
 private:
-	// AL IDs
-	ALuint m_Source = 0;
-	SoundBuffer* m_Buffer = nullptr; 
+// AL IDs
+ALuint m_Source = 0;
+SoundBuffer* m_Buffer = nullptr; 
 
-	float m_Pitch = 1.f;
-	float m_Gain = 1.f;
-	float m_Position[3] = {};
-	float m_Velocity[3] = {};
-	bool	m_Loop = false;
-
+float m_Pitch = 1.f;
+float m_Gain = 1.f;
+float m_Position[3] = {};
+float m_Velocity[3] = {};
+bool m_Loop = false;
 };
