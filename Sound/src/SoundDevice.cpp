@@ -11,11 +11,8 @@ SoundDevice::SoundDevice()
    if (!m_Context)   // verify success
 
    // make context current
-   if (!alcMakeContextCurrent(m_Context)) // verify success
-/*
-   // get name of device opened from enumerate all extension
-   const ALCchar* name = nullptr;
-
+  if (!alcMakeContextCurrent(m_Context))   const ALCchar* name = nullptr;
+/* 
    if (alcIsExtensionPresent(m_Device, "ALC_ENUMERATE_ALL_EXT"))
       name = alcGetString(m_Device, ALC_ALL_DEVICES_SPECIFIER);
    else
@@ -23,7 +20,8 @@ SoundDevice::SoundDevice()
    if (!name || !alcGetError(m_Device))
       name = alcGetString(m_Device, ALC_DEVICE_SPECIFIER);
 
- std::cout << "Opened Device: " << name << std::endl;  */
+ std::cout << "Opened Device: " << name << std::endl; 
+ */
 }
 
 SoundDevice::~SoundDevice()
