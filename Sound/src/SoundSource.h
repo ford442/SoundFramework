@@ -2,11 +2,9 @@
 
 #include <AL/al.h>
 #include <AL/alc.h>
-
 #include "SoundBuffer.h"
 
 class SoundSource{
-
 public:
 SoundSource();
 ~SoundSource();
@@ -17,7 +15,6 @@ private:
 // AL IDs
 ALuint m_Source = 0;
 SoundBuffer* m_Buffer = nullptr; 
-
 float m_Pitch = 1.f;
 float m_Gain = 1.f;
 float m_Position[3] = {};
