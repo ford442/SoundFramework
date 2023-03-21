@@ -7,7 +7,7 @@
 #include <AL/alc.h>
 #include <AL/alext.h>
 
-#include "../libsndfile/include/sndfile.h"
+#include <sndfile.h>
 #include <inttypes.h>
 
 void DisplayALError(const char* msg,ALenum error);
