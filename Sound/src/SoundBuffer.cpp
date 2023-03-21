@@ -13,13 +13,11 @@ ALsizei num_bytes;
 soundEffect = sf_open(audioFilename, SFM_READ, &sfinfo);
 if (!soundEffect){
 std::cout << "Could not open audio file: " << audioFilename << std::endl;
-__debugbreak();
 }
    // verify file has valid data
 if (sfinfo.frames < 1 || sfinfo.frames >(sf_count_t)(INT_MAX / sizeof(short)) / sfinfo.channels){
 std::cout << "Audio file: " << audioFilename << " : produced invalid data" << std::endl;
 sf_close(soundEffect);
-__debugbreak();
 }
 
 // get sound format and configure openal format
@@ -36,7 +34,6 @@ format = AL_FORMAT_BFORMAT3D_16; // 3d
 if (!format){
 std::cout << "Unsuported channel count/format: " << audioFilename << std::endl;
 sf_close(soundEffect);
-__debugbreak;
 }
    // decode the audio file into a buffer
    // static cast required since c++ yells at it
@@ -46,7 +43,6 @@ if (num_frames < 1){
 free(membuf);
 sf_close(soundEffect);
 std::cout << "Failed to read samples in audio file: " << audioFilename << std::endl;
-__debugbreak();
 }
 num_bytes = (ALsizei)(num_frames * sfinfo.channels) * (ALsizei)sizeof(short);
    //! OpenAL stuff
@@ -60,7 +56,6 @@ sf_close(soundEffect);
 while (err = alGetError()){
 DisplayALError("AL Error in " __FUNCTION__ ": ", err);
 alDeleteBuffers(1, &m_ID);
-__debugbreak();
 }
 std::cout << "Loaded audio file :'" << audioFilename << "' with ID (" << m_ID << ')' << std::endl;
 }
